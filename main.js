@@ -19,6 +19,8 @@ function pesquisaSatisfacao(){
             somaInsatisfeitas++
             contador++
             soma += nota
+        } else {
+            contador++
         }
     }
     media = soma / 10
