@@ -1,24 +1,29 @@
 function pesquisaSatisfacao(){
-    let somaSatisfeitas, somaInsatisfeitas, nota, contador
+    let somaSatisfeitas, somaInsatisfeitas, nota, contador, media, soma
     contador = 1
     somaSatisfeitas = 0
     somaInsatisfeitas = 0
     nota = 0
+    media = 0
+    soma = 0
 
     while(contador <= 10){
         nota = Number(prompt(`Informe a nota da pessoa ${contador}`))
-        if(nota >= 8){
+        if(!nota && nota !== 0){
+
+        } else if(nota >= 8){
             somaSatisfeitas++
             contador++
-        } else if(nota < 8) {
+            soma += nota
+        } else if(nota < 5){
             somaInsatisfeitas++
             contador++
-        } else if(!nota){
-            
+            soma += nota
         }
-        
     }
+    media = soma / 10
     alert(`Pessoas satisfeitas: ${somaSatisfeitas} | Pessoas insatisfeitas: ${somaInsatisfeitas}`)
+    alert(`Média de notas: ${media}`)
     
     
 }
