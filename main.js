@@ -9,7 +9,7 @@ function pesquisaSatisfacao(){
 
     while(contador <= 10){
         nota = Number(prompt(`Informe a nota da pessoa ${contador}`))
-        if(nota == 0 || !nota){
+        if(nota == 0 && !nota){ //a corrigir | 0 não funciona
            
         } else if(nota >= 8){
             somaSatisfeitas++
