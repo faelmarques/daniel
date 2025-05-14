@@ -14,7 +14,11 @@ function calculo(){
 
     while(cont <= 8){
         idade = Number(prompt(`Insira a idade da pessoa ${cont}`))
-        if(idade <= 15){
+        if(idade >= 120 || idade < 0 || !idade) {
+        alert("Idade invalida")
+        continue
+        }
+        else if(idade <= 15){
         f1++
         } else if(idade >= 16 && idade <= 30){
         f2++
@@ -24,8 +28,6 @@ function calculo(){
         f4++
         } else if(idade > 60){
         f5++
-        } else if(!idade && idade == 0) {
-        
         }
         cont++
 
