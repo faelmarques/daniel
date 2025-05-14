@@ -7,7 +7,7 @@ function calculo(){
     let f4 = 0;
     let f5 = 0;
 
-    let media = 0;
+    let porc = 0;
     let porc2 = 0;
 
     let idade = 0;
@@ -24,19 +24,17 @@ function calculo(){
         f4++
         } else if(idade > 60){
         f5++
-        } else {
+        } else if(!idade && idade == 0) {
         
         }
         cont++
-        
-        
 
     }
     alert(`1ª faixa etária: ${f1} | 2ª faixa etária: ${f2} | 3ª faixa etária: ${f3} | 4ª faixa etária: ${f4} | 5ª faixa etária: ${f5}`)
-    //
+    
 
-    media = (f1 / (cont-1)) * 100    
-    alert(`Porcentagem da 1ª faixa etária em relação ao total: ${media}%`)
+    porc = (f1 / (cont-1)) * 100    
+    alert(`Porcentagem da 1ª faixa etária em relação ao total: ${porc}%`)
 
     porc2 = (f5 / (cont-1)) * 100
     alert(`Porcentagem da 5ª faixa etária em relação ao total: ${porc2}%`)
